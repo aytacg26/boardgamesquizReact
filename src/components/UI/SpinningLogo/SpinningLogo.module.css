@@ -1,0 +1,41 @@
+.animating-logo {
+  width: 150px;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-animation: logo 2s linear 0s infinite;
+  animation: logo 2s linear 0s infinite;
+  margin: 10px;
+}
+
+.animating-logo img {
+  max-width: 100%;
+}
+
+@-webkit-keyframes logo {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(359deg);
+    transform: rotateZ(359deg);
+  }
+}
+@keyframes logo {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(359deg);
+    transform: rotateZ(359deg);
+  }
+}

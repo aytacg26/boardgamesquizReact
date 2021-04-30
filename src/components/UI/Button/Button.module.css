@@ -1,0 +1,41 @@
+.button {
+  width: 100%;
+  border-radius: 12px;
+  height: 40px;
+  font-size: 16.5px;
+  font-weight: 800;
+  margin: 5px;
+  cursor: pointer;
+  border: 0 none;
+  transition: all 0.4s;
+  color: #fff;
+}
+
+.disabled {
+  pointer-events: none;
+  background-color: rgb(156, 156, 156) !important;
+  opacity: 0.5;
+}
+
+.button.Success {
+  background-color: var(--logoGreen);
+}
+
+.button.Danger {
+  background-color: var(--logoRed);
+}
+
+.button.Warning {
+  background-color: var(--logoYellow);
+  color: var(--logoBlue);
+}
+
+.button.Primary {
+  background-color: var(--logoBlue);
+}
+
+.button.btnYellow:hover,
+.button.btnGreen:hover {
+  opacity: 0.8;
+  box-shadow: 0 0 15px yellowgreen;
+}

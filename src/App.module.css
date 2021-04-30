@@ -1,0 +1,11 @@
+.container {
+  width: 100vw;
+  height: calc(100vh - 55px);
+  background: var(--logoBlue);
+  margin-top: 55px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}

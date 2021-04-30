@@ -1,0 +1,115 @@
+.CountDownContainer {
+  width: 650px;
+  max-width: 90vw;
+  height: 70vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.Player {
+  position: absolute;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 1px 1px 3px black;
+  animation: player 0.65s linear 0s 1 forwards;
+}
+
+.Question {
+  position: absolute;
+  width: 100%;
+  background-color: red;
+  margin: 5px 8px;
+  padding: 16px;
+  text-align: center;
+  font-size: 25px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px black;
+  color: #fff;
+  font-weight: 600;
+  opacity: 0;
+  animation: question 0.65s linear 0.65s 1 forwards;
+}
+
+.Description {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  margin: 6px 3px;
+  font-size: 22px;
+  align-self: flex-end;
+  margin: 145px 3px 10px 3px;
+  opacity: 0;
+  animation: description 0.65s linear 1.2s 1 forwards;
+}
+
+.Counter {
+  font-size: 120px;
+  color: var(--logoYellow);
+}
+
+@keyframes player {
+  0% {
+    top: -16vh;
+  }
+
+  50% {
+    top: 10vh;
+  }
+
+  100% {
+    top: 5vh;
+  }
+}
+
+@keyframes question {
+  0% {
+    top: -26vh;
+    opacity: 0;
+  }
+
+  50% {
+    top: 22vh;
+    opacity: 0.85;
+  }
+
+  100% {
+    top: 17vh;
+    opacity: 1;
+  }
+}
+
+@keyframes description {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 650px) {
+  .Player {
+    font-size: 18px;
+  }
+
+  .Question {
+    padding: 14px;
+    font-size: 18px;
+  }
+
+  .Description {
+    font-size: 16px;
+    text-align: justify;
+    margin: 125px 3px 10px 3px;
+  }
+
+  .Counter {
+    font-size: 60px;
+    color: var(--logoYellow);
+  }
+}

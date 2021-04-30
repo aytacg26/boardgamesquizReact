@@ -1,0 +1,120 @@
+.Modal {
+  position: fixed;
+  width: 550px;
+  max-width: 95vw;
+  max-height: 290px;
+  height: max-content;
+  background-color: #fff;
+  z-index: 100;
+  top: -290px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  box-shadow: 2px 4px 8px black;
+  border: 1px solid silver;
+  /* animation: modalLeaves 0.55s ease-in 0s 1 forwards; */
+}
+
+.Modal.Show {
+  animation: modalEnters 0.55s ease-in 0s 1 forwards;
+}
+
+.Header {
+  width: 100%;
+  height: 60px;
+  padding: 8px 15px;
+  font-size: 1.24rem;
+  font-weight: 600;
+  display: grid;
+  grid-template-columns: 30px 1fr 40px;
+  align-items: center;
+
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  letter-spacing: 1.14px;
+}
+
+.Header span {
+  margin: 0 4px;
+}
+
+.Header.Success {
+  background-color: var(--logoGreen);
+}
+
+.Header.Danger {
+  background-color: var(--logoRed);
+}
+
+.Header.Warning {
+  background-color: var(--logoYellow);
+  color: var(--logoBlue);
+}
+
+.Header.Primary {
+  background-color: var(--logoBlue);
+}
+
+.CloseModal {
+  font-size: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: max-content;
+  border-radius: 100%;
+  transition: all 0.45s;
+}
+
+.CloseModal:hover {
+  color: greenyellow;
+}
+
+.Content {
+  padding: 25px 45px;
+  font-size: 16.5px;
+  text-align: center;
+}
+
+@keyframes modalEnters {
+  0% {
+    top: -290px;
+  }
+
+  50% {
+    top: 60%;
+  }
+
+  100% {
+    top: 40%;
+  }
+}
+
+@keyframes modalLeaves {
+  0% {
+    top: 40%;
+  }
+
+  100% {
+    top: -290px;
+  }
+}
+
+@media (max-width: 500px) {
+  .Header {
+    height: 45px;
+    padding: 5px 10px;
+    font-size: 0.95rem;
+    letter-spacing: 1.1px;
+  }
+
+  .Content {
+    padding: 25px 20px;
+    font-size: 14.5px;
+    text-align: center;
+  }
+
+  .Actions {
+    justify-content: center;
+  }
+}

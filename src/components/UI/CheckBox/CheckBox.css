@@ -1,0 +1,148 @@
+.checkbox-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.checkbox-container {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 6px;
+  padding-left: 40px;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  left: 0;
+  background-color: #eee;
+}
+
+.checkmark {
+  top: 5.5px;
+  background-color: #eee;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.checkbox-container.correct {
+  border-radius: 15px;
+  -webkit-animation: correctPulse 1s linear 0s 3 forwards;
+  animation: correctPulse 1s linear 0s 3 forwards;
+}
+
+.checkbox-container.wrong {
+  background-color: rgba(240, 60, 60, 0.6);
+  border-radius: 15px;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@-webkit-keyframes correctPulse {
+  0% {
+    background-color: #1ba14500;
+  }
+
+  100% {
+    background-color: #1ba145;
+  }
+}
+@keyframes correctPulse {
+  0% {
+    background-color: #1ba14500;
+  }
+
+  100% {
+    background-color: #1ba145;
+  }
+}
+
+@media (max-width: 500px) {
+  .checkbox-container {
+    margin-bottom: 4px;
+    font-size: 16px;
+    padding: 5px;
+    padding-left: 40px;
+  }
+
+  .check-container {
+    padding: 4px;
+    padding-left: 35px;
+    margin-bottom: 12px;
+
+    font-size: 16px;
+  }
+
+  .checkmark {
+    top: 1.7px;
+
+    height: 22px;
+    width: 22px;
+  }
+
+  .check-mark {
+    top: -1px;
+
+    height: 20px;
+    width: 20px;
+
+    margin: 3px;
+  }
+
+  .check-container .check-mark:after {
+    top: 6px;
+    left: 6px;
+  }
+
+  .checkbox-container .checkmark:after {
+    left: 7px;
+    top: 2px;
+  }
+}

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio&display=swap');
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 55px;
+  background: var(--logoBlue);
+  -webkit-box-shadow: 1px 1px 3px black;
+  box-shadow: 1px 1px 3px black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 5px;
+  z-index: 10;
+}
+
+.header h1 {
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+.header img {
+  width: 45px;
+}
+
+.title {
+  color: var(--logoRed);
+  text-shadow: 1px 1px 2px black;
+  font-size: 18px !important;
+  font-family: 'Antonio', sans-serif;
+}
+
+.title-2 {
+  color: var(--logoYellow);
+  margin-left: 4px;
+}
